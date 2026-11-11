@@ -1,0 +1,140 @@
+# Dependency directories
+node_modules/
+**/node_modules/
+jspm_packages/
+
+# Environment files - NEVER commit real credentials.
+# Commit templates instead: .env.example / .env.sample
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+*.env
+!.env.example
+!.env.*.example
+
+# Secrets & keys (defense in depth - real config belongs in .env)
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+
+# Build outputs
+dist/
+**/dist/
+build/
+**/build/
+out/
+.next/
+
+# Test & coverage output
+coverage/
+*.lcov
+.nyc_output/
+htmlcov/
+.coverage
+.coverage.*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Git lock files (prevent accidental commit of stale lock files)
+*.lock
+!package-lock.json
+!yarn.lock
+
+# Editor & OS files
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvsopt
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+desktop.ini
+*.stackdump
+__MACOSX/
+._*
+
+# Editor backups, caches & temp files
+*.bak
+*.orig
+*.save
+*~
+.cache/
+.eslintcache
+.vite/
+*.tmp
+*.local
+
+# Python - local face AI service (ai-service/)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# DeepFace / OpenCV model weights - downloaded once into ~/.deepface/weights,
+# outside this repo. Never commit the binaries here either.
+*.onnx
+*.h5
+*.pth
+*.pt
+*.tflite
+*.caffemodel
+*.pb
+**/.deepface/
+
+# Local database exports (mongo dumps, bson, sqlite scratch files)
+dump/
+*.bson
+*.sqlite
+*.sqlite3
+*backup*.json
+*-backup*.json
+
+# Uploaded receipts & captured face photos (per-user data, never in git).
+# Face photos and student photos are stored directly in MongoDB;
+# disk uploads directories are local-only.
+uploads/
+**/uploads/
+backend/uploads/
+
+# Runtime ESP32-CAM address saved from the UI (machine-specific, not shared)
+backend/.esp32-camera.json
+
+# Archives and compressed files
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# AI agent, scratch and system-generated files
+.freebuff/
+.gemini/
+.system_generated/
+scratch/
+*_rendered*.png
+*_detected*.jpg
+*_crop*.png
+*_test*.png

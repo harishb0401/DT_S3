@@ -1,0 +1,29 @@
+const express = require('express');
+const authRoutes = require('./auth.routes');
+const studentRoutes = require('./student.routes');
+const busRoutes = require('./bus.routes');
+const travelRoutes = require('./travel.routes');
+const unpaidRoutes = require('./unpaid.routes');
+const reportRoutes = require('./report.routes');
+const webhookRoutes = require('./webhook.routes');
+const analyticsRoutes = require('./analytics.routes');
+const receiptRoutes = require('./receipt.routes');
+const faceRoutes = require('./face.routes');
+const esp32Routes = require('./esp32.routes');
+const busUnpaidRoutes = require('./busUnpaid.routes');
+
+const router = express.Router();
+router.use('/auth', authRoutes);
+router.use('/students', studentRoutes);
+router.use('/buses', busRoutes);
+router.use('/travel', travelRoutes);
+router.use('/unpaid', unpaidRoutes);
+router.use('/bus-unpaid', busUnpaidRoutes);
+router.use('/reports', reportRoutes);
+router.use('/webhook', webhookRoutes);
+router.use('/analytics', analyticsRoutes);
+router.use('/receipts', receiptRoutes);
+router.use('/face', faceRoutes);
+router.use('/esp32', esp32Routes);
+
+module.exports = router;
